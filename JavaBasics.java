@@ -6,7 +6,13 @@ public class JavaBasics {
         int input = scanner.nextInt();
         // printPattern1(input);
         // printPattern2(input);
-        printReverseNumber(input);
+        // printReverseNumber(input);
+        if (isPrimeNumber(input)) {
+            System.out.println(input + " is prime");
+        } else {
+            System.out.println(input + " is not prime");
+
+        }
 
     }
 
@@ -42,6 +48,24 @@ public class JavaBasics {
         }
 
         System.out.println(reverse);
+    }
+
+    public static Boolean isPrimeNumber(int x) {
+        if (x < 2) {
+            return false;
+        } else if (x == 2) {
+            return true;
+        } else if (x % 2 == 0) {
+            return false;
+        } else {
+            for (int i = 3; i <= Math.sqrt(x); i += 2) {
+                if (x % i == 0) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 
 }
