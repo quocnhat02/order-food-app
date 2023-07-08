@@ -4,19 +4,10 @@ public class JavaBasics {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
-        // printPattern1(input);
-        // printPattern2(input);
-        // printReverseNumber(input);
-        if (isPrimeNumber(input)) {
-            System.out.println(input + " is prime");
-        } else {
-            System.out.println(input + " is not prime");
-
-        }
-
+        printStarPattern2(input);
     }
 
-    public static void printPattern1(int x) {
+    public static void printStarPattern1(int x) {
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < x; j++) {
                 if (j < x - i) {
@@ -27,12 +18,21 @@ public class JavaBasics {
         }
     }
 
-    public static void printPattern2(int x) {
+    public static void printStarPattern2(int x) {
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < x; j++) {
+                if (j <= i) {
+                    System.out.printf(" * ");
+                }
+            }
+            System.out.printf("\n");
+        }
+    }
 
+    public static void printSquarePattern(int x) {
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < x; j++) {
                 System.out.printf(" * ");
-
             }
             System.out.printf("\n");
         }
