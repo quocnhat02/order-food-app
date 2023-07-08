@@ -70,12 +70,8 @@ public class JavaBasics {
 
     public static void printHalfPyramidPattern(int x) {
         for (int i = 0; i < x; i++) {
-            int number = 1;
-            for (int j = 0; j < x; j++) {
-                if (j <= i) {
-                    System.out.print(number);
-                    number++;
-                }
+            for (int j = 0; j <= i; j++) {
+                System.out.print(j + 1);
             }
             System.out.printf("\n");
         }
