@@ -4,7 +4,7 @@ public class JavaBasics {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
-        printStarPattern2(input);
+        printHalfPyramidPattern(input);
     }
 
     public static void printStarPattern1(int x) {
@@ -66,6 +66,19 @@ public class JavaBasics {
         }
 
         return true;
+    }
+
+    public static void printHalfPyramidPattern(int x) {
+        for (int i = 0; i < x; i++) {
+            int number = 1;
+            for (int j = 0; j < x; j++) {
+                if (j <= i) {
+                    System.out.print(number);
+                    number++;
+                }
+            }
+            System.out.printf("\n");
+        }
     }
 
 }
