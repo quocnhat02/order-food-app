@@ -91,9 +91,7 @@ public class JavaBasics {
     public static void printHollowRectanglePattern(int x) {
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < x; j++) {
-                if (i == 0 || i == x - 1) {
-                    System.out.printf(" * ");
-                } else if (j == 0 || j == x - 1) {
+                if (i == 0 || i == x - 1 || j == 0 || j == x - 1) {
                     System.out.printf(" * ");
                 } else {
                     System.out.printf("   ");
