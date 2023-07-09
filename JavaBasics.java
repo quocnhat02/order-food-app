@@ -4,7 +4,7 @@ public class JavaBasics {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
-        printHollowRectanglePattern(input);
+        printStarPattern3(input);
     }
 
     public static void printStarPattern1(int x) {
@@ -23,6 +23,19 @@ public class JavaBasics {
             for (int j = 0; j < x; j++) {
                 if (j <= i) {
                     System.out.printf(" * ");
+                }
+            }
+            System.out.printf("\n");
+        }
+    }
+
+    public static void printStarPattern3(int x) {
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < x; j++) {
+                if (j >= x - i - 1) {
+                    System.out.printf(" * ");
+                } else {
+                    System.out.printf("   ");
                 }
             }
             System.out.printf("\n");
