@@ -4,7 +4,7 @@ public class JavaBasics {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();
-        printFloydTriangle(input);
+        print01Triangle(input);
     }
 
     public static void printStarPattern1(int x) {
@@ -134,6 +134,20 @@ public class JavaBasics {
                     System.out.print(num + "  ");
                 }
                 num++;
+            }
+            System.out.printf("\n");
+        }
+    }
+
+    public static void print01Triangle(int x) {
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j <= i; j++) {
+                if ((i + j) % 2 == 0) {
+                    System.out.print("1 ");
+                } else {
+                    System.out.print("0 ");
+
+                }
             }
             System.out.printf("\n");
         }
