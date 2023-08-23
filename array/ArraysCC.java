@@ -6,26 +6,28 @@ import java.util.Scanner;
  * ArraysCC
  */
 public class ArraysCC {
-    public static int linearSearch(int numbers[], int key) {
+    public static int getLargest(int numbers[]) {
+        int largest = Integer.MIN_VALUE;
+        int smallest = Integer.MAX_VALUE;
+
         for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] == key) {
-                return i;
+            if (largest < numbers[i]) {
+                largest = numbers[i];
+            }
+
+            if (smallest > numbers[i]) {
+                smallest = numbers[i];
             }
         }
 
-        return -1;
+        System.out.println("smallest value is : " + smallest);
+        return largest;
     }
 
     public static void main(String[] args) {
-        int numbers[] = { 97, 98, 99 };
-        int key = 98;
+        int numbers[] = { 1, 2, 6, 3, 5 };
+        System.out.println("largest value is : " + getLargest(numbers));
 
-        int index = linearSearch(numbers, key);
-        if (index == -1) {
-            System.out.println("NOT found");
-        } else {
-            System.out.println("key is at index " + index);
-        }
     }
 
 }
