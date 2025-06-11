@@ -23,6 +23,11 @@
             <artifactId>ticket-domain</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.ticket.service</groupId>
+            <artifactId>ticket-infrastructure</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
