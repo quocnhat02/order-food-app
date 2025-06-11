@@ -2,13 +2,11 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for ticket-service" enabled="true">
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
-        </processorPath>
         <module name="ticket-controller" />
         <module name="ticket-start" />
         <module name="ticket-application" />
@@ -23,7 +21,7 @@
       <module name="ticket-controller" options="-parameters" />
       <module name="ticket-domain" options="-parameters" />
       <module name="ticket-infrastructure" options="-parameters" />
-      <module name="ticket-service" options="-parameters" />
+      <module name="ticket-service" options="" />
       <module name="ticket-start" options="-parameters" />
     </option>
   </component>
