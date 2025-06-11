@@ -1,6 +1,6 @@
 package com.ticket.service.ddd.controller.http;
 
-import com.ticket.service.ddd.application.model.TicketExampleDTO;
+import com.ticket.service.ddd.application.model.TicketDetailDTO;
 import com.ticket.service.ddd.application.service.ticket.TicketDetailAppService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +15,7 @@ public class HiController {
     private TicketDetailAppService ticketDetailAppService;
 
     @GetMapping("/hi")
-    public TicketExampleDTO sayHi() {
-        return ticketDetailAppService.getTicketExample();
+    public TicketDetailDTO sayHi() {
+        return ticketDetailAppService.getTicketDetailById(10L, 10L);
     }
 }

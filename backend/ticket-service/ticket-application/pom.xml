@@ -18,7 +18,11 @@
     </properties>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.ticket.service</groupId>
+            <artifactId>ticket-domain</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
 </project>
